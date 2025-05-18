@@ -9,6 +9,7 @@ import { CartProvider } from './context/CartContext';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
+import CartDrawer from './components/CartDrawer';
 function App() {
 
  useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
      <CartProvider>
       <Router>
         <Header />
+        <CartDrawer/>
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductDetail/>} />
